@@ -1,0 +1,186 @@
+:root {
+    --bg-main: #295F98;
+    --text-light: #fff;
+    --text-med: #53627c;
+    --text-dark: #1e2432;
+    --red: #ff1e42;
+    --darkred: #c3112d;
+    --orange: #ff8c00;
+    --transition-speed: 0.3s;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    padding: 70px 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input {
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+    transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    background: var(--red);
+    color: var(--text-light);
+    box-shadow: var(--box-shadow);
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+button:hover {
+    background: var(--darkred);
+    transform: translateY(-2px);
+}
+
+input {
+    font-size: 1rem;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid var(--text-light);
+    border-radius: var(--border-radius);
+    color: var(--text-dark);
+    background: var(--text-light);
+}
+
+input::placeholder {
+    color: var(--text-med);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.top-banner {
+    color: var(--text-light);
+    text-align: center;
+}
+
+.heading {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+}
+
+.top-banner form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.ajax-section {
+    margin: 70px 0 20px;
+}
+
+.ajax-section .cities {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.ajax-section .city {
+    position: relative;
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    color: var(--text-med);
+    box-shadow: var(--box-shadow);
+    transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+}
+
+.ajax-section .city:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.ajax-section .city::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 5%;
+    width: 90%;
+    height: 60px;
+    background: var(--text-light);
+    border-radius: var(--border-radius);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.ajax-section figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-med);
+}
+
+.ajax-section .city-temp {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 10px;
+    color: var(--text-dark);
+}
+
+.ajax-section .city sup {
+    font-size: 0.6em;
+}
+
+.ajax-section .city-name sup {
+    background-color: var(--orange);
+    color: var(--text-light);
+    padding: 0.2em 0.4em;
+    border-radius: var(--border-radius);
+}
+
+.ajax-section .city-icon {
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.page-footer {
+    text-align: right;
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 40px;
+}
+
+.page-footer span {
+    color: var(--red);
+}
